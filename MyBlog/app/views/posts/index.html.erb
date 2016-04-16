@@ -1,11 +1,50 @@
-<%= stylesheet_link_tag "custom" %>
-<% @posts.each do |post| %>
+<%= stylesheet_link_tag "grayscale" %>
+<!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">
+                <i class="fa fa-play-circle"></i>  <span class="light">Alex</span> Terrazas
+            </a>
+        </div>
 
-    <p>
-      <h5>Post title: <%= post.title%></h5>
-    </p>
-    <p>
-      <h5>Post Description: <%= post.text%></h5>
-    </p>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#about">About</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#download">Blog</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
 
-<%end%>
+
+<div class="post-index">
+  <% @posts.each do |post| %>
+    <div class="ind-post">
+      <h3><%= post.title%></h3>
+      <p>
+        <h5><%= post.text%></h5>
+      </p>
+      <button type="button" class="btn btn-primary btn-sm">Read</button>
+    </div>
+    <br>
+  <%end%>
+  <a href="/posts/new" class="btn btn-success btn-lg" role="button">New Post</a>
+</div>

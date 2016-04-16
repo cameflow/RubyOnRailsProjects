@@ -1,2 +1,31 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.post-index {
+  text-align: center;
+  color: black;
+  margin-top: 80px;
+}
+
+.ind-post {
+  padding: 10px;
+  background-color: #DDDDDC;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: 1px solid white;
+}
+
+.new-form {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1%;
+}
+
+.textfield {
+  color: black;
+}
+
+textarea{
+  color: black;
+}
