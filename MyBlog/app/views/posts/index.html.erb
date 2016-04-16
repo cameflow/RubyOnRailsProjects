@@ -1,2 +1,11 @@
 <%= stylesheet_link_tag "custom" %>
-<h1>Hola</h1>
+<% @posts.each do |post| %>
+
+    <p>
+      <h5>Post title: <%= post.title%></h5>
+    </p>
+    <p>
+      <h5>Post Description: <%= post.text%></h5>
+    </p>
+
+<%end%>
