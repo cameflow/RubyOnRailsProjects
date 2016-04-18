@@ -6,7 +6,7 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">
+            <a class="navbar-brand page-scroll" href="/#page-top">
                 <i class="fa fa-play-circle"></i>  <span class="light">Alex</span> Terrazas
             </a>
         </div>
@@ -19,13 +19,13 @@
                     <a href="#page-top"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#about">About</a>
+                    <a class="page-scroll" href="/#about">About</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#download">Blog</a>
+                    <a class="page-scroll" href="/#download">Blog</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
+                    <a class="page-scroll" href="/#contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -42,7 +42,7 @@
       <p>
         <h5><%= post.text%></h5>
       </p>
-      <button type="button" class="btn btn-primary btn-sm">Read</button>
+      <%= link_to "Read", post_path(post), class: "btn btn-success"%>
     </div>
     <br>
   <%end%>

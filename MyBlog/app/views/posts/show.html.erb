@@ -1,0 +1,13 @@
+<h1 style="text-align: center; margin-top:3%;"><%= @post.title %></h1>
+<hr>
+<div class="post-image">
+    <%= image_tag(@post.picture.url) if @post.picture? %>
+</div>
+<br>
+<div class="post-text">
+  <p><%= @post.text %><p>
+</div>
+<div class="back-button">
+  <%= link_to "Back", posts_path, class: "btn btn-lg btn-danger"%>
+</div>
+<br>

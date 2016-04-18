@@ -13,6 +13,7 @@
   margin-left: 10%;
   margin-right: 10%;
   border: 1px solid white;
+  white-space: nowrap;
 }
 
 .new-form {
@@ -28,4 +29,38 @@
 
 textarea{
   color: black;
+}
+
+.post-image {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.post-text {
+  text-align: left;
+  background-color: #DDDDDC;
+  color: black;
+  padding-left: 2%;
+  padding-right: 2%;
+  border: 5px solid white;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+img{
+  width: 80%;
+  height: auto;
+}
+
+span.picture{
+  margin-top: 10px;
+  input{
+    border: 0px;
+  }
+}
+
+.back-button {
+  text-align: center;
+  margin-top: 3%;
 }

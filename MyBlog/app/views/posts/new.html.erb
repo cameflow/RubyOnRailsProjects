@@ -2,7 +2,7 @@
 
   <h1>Create new post</h1>
 
-    <%= form_for @post do |f| %>
+    <%= form_for(@post, html:{ multipart: true }) do |f| %>
       <%= f.label :title %>
       <br>
       <div class="textfield">
@@ -15,6 +15,19 @@
 
       <br>
       <br>
+      <span class="picture">
+        <%= f.file_field :picture, accpet: 'image/jpeg,image/gif,image/png' %>
+      </span>
       <%= f.submit 'Post', class: "btn btn-success btn-lg" %>
     <% end %>
 </div>
+
+<script type="text/javascript">
+  $('#post_picture').bind('change', function(){
+    size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5)
+    {
+      alert('maximum file size is 5MB, please choose a smaller file');
+    }
+  });
+</script>
