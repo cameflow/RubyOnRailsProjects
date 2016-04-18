@@ -38,10 +38,8 @@
 <div class="post-index">
   <% @posts.each do |post| %>
     <div class="ind-post">
+      <%= image_tag(post.picture.url) if post.picture? %>
       <h3><%= post.title%></h3>
-      <p>
-        <h5><%= post.text%></h5>
-      </p>
       <%= link_to "Read", post_path(post), class: "btn btn-success"%>
       <%= link_to "Edit", edit_post_path(post), class: "btn btn-warning"%>
       <%= link_to "Delete", post, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
