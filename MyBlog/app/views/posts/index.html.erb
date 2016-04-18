@@ -44,6 +44,7 @@
       </p>
       <%= link_to "Read", post_path(post), class: "btn btn-success"%>
       <%= link_to "Edit", edit_post_path(post), class: "btn btn-warning"%>
+      <%= link_to "Delete", post, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
     </div>
     <br>
   <%end%>
