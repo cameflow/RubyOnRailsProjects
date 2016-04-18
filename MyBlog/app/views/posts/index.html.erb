@@ -43,6 +43,7 @@
         <h5><%= post.text%></h5>
       </p>
       <%= link_to "Read", post_path(post), class: "btn btn-success"%>
+      <%= link_to "Edit", edit_post_path(post), class: "btn btn-warning"%>
     </div>
     <br>
   <%end%>
