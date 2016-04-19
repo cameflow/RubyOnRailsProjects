@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+
+  before_action :requiere_user, except: [:show, :index, :like]
+
   def index
     @posts = Post.all
   end
